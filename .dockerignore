@@ -1,0 +1,11 @@
+.dockerignore
+node_modules
+*.yaml
+*~
+*.sh
+.env.example
+.git
+.gitignore
+Dockerfile
+LICENSE
+README.md

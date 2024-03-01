@@ -8,13 +8,14 @@ process.on('uncaughtException', e => {
 
 import Crumbware from "crumbware";
 import http from 'node:http';
+import { URL } from 'node:url';
 import {Docker} from 'docker-bowline';
 
 const dockSock = new Docker({
     socket: "/var/run/docker.sock"
 });
 
-const app = new Crumbware(http.createServer());
+const app = new Crumbware(http.createServer(), URL);
 
 app.use('/', async (_, res) => {
     const cList = (await dockSock.containers.list()).toSorted(

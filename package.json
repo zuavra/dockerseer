@@ -1,14 +1,13 @@
 {
   "type": "module",
   "dependencies": {
-    "crumbware": "github:zuavra/crumbware",
+    "crumbware": "^0.0.1",
     "docker-bowline": "^0.0.3"
   },
   "name": "dockerseer",
   "description": "Simple Docker container status viewer and manager.",
   "version": "0.0.1",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
